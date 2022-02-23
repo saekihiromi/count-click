@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+
+        <div class="container">
+            <h1>My Counter App</h1>
+            <span v-if="count >= 100">おめでとうございます!</span>
+            <span v-else-if="count >= 70">あと少しです</span>
+            <span v-else-if="count >= 50">半分経過</span>
+            <span V-else >100回クリック</span>
+
+            <div class="counter">
+                <p>{{ count }}</p>
+            </div>
+
+            <div class="btn-wrap">
+                <button v-on:click="decrement">-1</button>
+                <button v-on:click="increment">+1</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
